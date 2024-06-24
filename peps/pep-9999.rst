@@ -1,0 +1,124 @@
+PEP: 9999
+Title: Python Security Response Team membership policy
+Author: Seth Michael Larson <seth@python.org>
+Status: Draft
+Type: Process
+Created: 24-Jun-2024
+
+Abstract
+========
+
+This PEP proposes a policy and framework for management of the Python Security Response Team (PSRT).
+The PSRT is a "highly trusted cabal of Python developers" which handles security vulnerability disclosures to the ``security@python.org`` mailing list.
+
+PSRT members have access to known vulnerabilities affecting CPython and pip before they're disclosed to the public.
+This information is sensitive and if leaked could harm Python users through zero-day attacks, where an attacker has access
+to exploitable vulnerabilities before defenders are notified of fixes and given a chance to upgrade.
+
+For this reason reducing excess risk around who has access to this information without hampering the mission of the PSRT is important for Python ecosystem safety.
+Establishing a policy around the historically informal process of PSRT membership will provide a method for maintaining minimum effective membership long-term.
+
+Motivation and rationale
+========================
+
+The primary goal of this PEP is to keep pre-disclosed vulnerability information to the PSRT on a "need-to-know" basis
+without hampering the goals of the PSRT. The primary goal of the PSRT is coordination of vulnerability fixes, including:
+
+* Triaging reports sent to the ``security@python.org`` inbox.
+* Determining whether reports constitute a vulnerability in CPython or pip.
+* Developing fixes for security vulnerabilities "in-house" or with the help of core developers.
+* Authoring and publishing security advisories to ``security-announce@python.org`` once fixes are made available.
+
+Members that are actively contributing to the PSRT will be involved in the above processes.
+
+Who else needs access?
+----------------------
+
+Beyond triaging and coordination there are other reasons people need access to vulnerability information
+before it is disclosed to the public.
+
+Release managers need access information about security issues to backport fixes to bugfix or security branches of Python.
+Release managers may also need to be clued in to security fixes which are happening outside of the typical "feature freeze" or
+"bugfixes-only" windows for a release branch.
+
+Steering Council members and infrastructure admins don't necessarily need access to vulnerability information, however
+need access to the group itself to oversee operations. For this reason it's appropriate to have at least one member
+of the Steering Council on the PSRT.
+
+Specification
+=============
+
+This PEP proposes codifying the below policy and management framework for PSRT membership
+into the Python Developer Guide. This PEP also proposes immediately pruning the PSRTs existing
+membership according to the described policy and publishing the list of active PSRT members after its acceptance.
+
+Membership policy
+-----------------
+
+To remain a member of the PSRT, each member must meet at least one of the criteria below:
+
+* Triage or coordinate at least one vulnerability in the past year (or have been added to the PSRT in the last year).
+* Release Managers and Experts with at least one non-EOL Python branch.
+* Active Steering Council members.
+
+All active Release Managers are expected to be members of the PSRT.
+At least two active PSRT members shall serve as admins, determined by the Steering Council.
+The Steering Council is the final arbiter for determining PSRT admins and members.
+
+Public membership
+-----------------
+
+Today it's not public information who is a member of the PSRT and thus who is able to access
+vulnerability reports. This PEP proposes that the list of PSRT members be made public similar to
+other Python working groups.
+
+Adding new members
+------------------
+
+If the PSRT feels that new members are needed to fulfill its duties new members can be proposed.
+The existing group will decide member(s) to add with the expectation being that new members
+are prominent people in the Python community. This will be done by fiat with the Steering Council
+being the final arbiter for membership decisions.
+
+Release Managers are added to the PSRT as soon as they are accepted by the Steering Council.
+
+New Steering Council members are added after the Steering Council election if there is not at
+least one newly active Steering Council member on the PSRT.
+
+Removal of members
+------------------
+
+At least once per year PSRT admins will evaluate the members of the PSRT against the membership policy,
+determining whether there are members that no longer meet the requirements and removing them from the PSRT.
+This PEP recommends using the Steering Council elections as an opportune time for this process.
+
+Steering Council members and Release Managers that are no longer on the Steering Council or
+have an active Python branch can remain on the PSRT if they meet any other membership criteria.
+
+As a purely voluntary role, membership can also be given up by the individual member themselves.
+
+Removed members are eligible to be re-added to the PSRT following the process for adding new members.
+
+Upon PEP acceptance, the policy will take effect and remove members who no longer fit the above criteria (1).
+
+Rejected ideas
+==============
+
+Should inactive members be more aggressively pruned?
+----------------------------------------------------
+
+The PSRT only triages a double-digit number of reports every year, meaning there
+aren't an abundance of opportunities to "prove" activity on the scale of months. For this
+reason along with aligning with existing yearly schedules, a yearly pruning was recommended.
+
+Footnotes
+=========
+
+* (1) Today there are 30 members in the PSRT. After applying the following policy there would be 15 members in the PSRT
+  which have actively coordinated a vulnerability fix in the past year.
+
+Copyright
+=========
+
+This document is placed in the public domain or under the
+CC0-1.0-Universal license, whichever is more permissive.
