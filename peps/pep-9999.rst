@@ -1,6 +1,7 @@
 PEP: 9999
 Title: Python Security Response Team membership policy
 Author: Seth Michael Larson <seth@python.org>
+Sponsor: Gregory P. Smith <greg@krypto.org>
 Status: Draft
 Type: Process
 Created: 24-Jun-2024
@@ -27,9 +28,13 @@ without hampering the goals of the PSRT. The primary goal of the PSRT is coordin
 * Triaging reports sent to the ``security@python.org`` inbox.
 * Determining whether reports constitute a vulnerability in CPython or pip.
 * Developing fixes for security vulnerabilities "in-house" or with the help of core developers.
+  This includes deciding when a vulnerability is appropriate to work in the open or privately.
 * Authoring and publishing security advisories to ``security-announce@python.org`` once fixes are made available.
 
 Members that are actively contributing to the PSRT will be involved in the above processes.
+
+PSRT admins have the additional responsibilities of reviewing submissions to the ``security@python.org`` inbox to prevent spam and abuse
+and are responsible for onboarding new members and ensuring PSRT processes are followed.
 
 Who else needs access?
 ----------------------
@@ -50,19 +55,27 @@ Specification
 
 This PEP proposes codifying the below policy and management framework for PSRT membership
 into the Python Developer Guide. This PEP also proposes immediately pruning the PSRTs existing
-membership according to the described policy and publishing the list of active PSRT members after its acceptance.
+membership according to the described policy and publishing the list of active PSRT members after its acceptance. (2)
 
 Membership policy
 -----------------
 
 To remain a member of the PSRT, each member must meet at least one of the criteria below:
 
-* Triage or coordinate at least one vulnerability in the past year (or have been added to the PSRT in the last year).
-* Release Managers and Experts with at least one non-EOL Python branch.
+* Participating on an internal PSRT report discussion at least one vulnerability in the past year (or have been added to the PSRT in the last year).
+* Release Managers with at least one non-EOL Python branch.
 * Active Steering Council members.
 
 All active Release Managers are expected to be members of the PSRT.
+
 At least two active PSRT members shall serve as admins, determined by the Steering Council.
+This PEP proposes the initial set of PSRT admins:
+
+* Ned Deily <nad@python.org>
+* Ee Durbin <ee@python.org>
+* Seth Larson <seth@python.org>
+* Barry Warsaw <barry@python.org>
+
 The Steering Council is the final arbiter for determining PSRT admins and members.
 
 Public membership
@@ -71,6 +84,10 @@ Public membership
 Today it's not public information who is a member of the PSRT and thus who is able to access
 vulnerability reports. This PEP proposes that the list of PSRT members be made public similar to
 other Python working groups.
+
+Making the PSRT members list public keeps the team accountable to interested parties
+like the Steering Council, vulnerability reporters, and users by showing who has access to sensitive
+information and is responsible for the end-to-end vulnerability remediation process.
 
 Adding new members
 ------------------
@@ -90,7 +107,8 @@ Removal of members
 
 At least once per year PSRT admins will evaluate the members of the PSRT against the membership policy,
 determining whether there are members that no longer meet the requirements and removing them from the PSRT.
-This PEP recommends using the Steering Council elections as an opportune time for this process.
+This PEP recommends that this be an action proposed by the PSRT admins, vetted by the new Steering Council,
+and taken within two months after a new SC election.
 
 Steering Council members and Release Managers that are no longer on the Steering Council or
 have an active Python branch can remain on the PSRT if they meet any other membership criteria.
@@ -100,6 +118,28 @@ As a purely voluntary role, membership can also be given up by the individual me
 Removed members are eligible to be re-added to the PSRT following the process for adding new members.
 
 Upon PEP acceptance, the policy will take effect and remove members who no longer fit the above criteria (1).
+Note that for the first round of removals post-PEP acceptance, there will be time given for voluntary stepping-down
+and removal of previous PSRT members will happen before publishing the list of PSRT members to avoid publishing members
+which haven't opted-in to the new policy with continued PSRT membership.
+
+Where membership is tracked
+---------------------------
+
+PSRT members are given access for the following:
+
+* Receive and send emails to the PSRT mailing list.
+* Send emails to the Security-Announce mailing list.
+* The "Security Response Team" role in the Python Core Developer Discord.
+* The "Member" role in the PSRT GitHub team. This team is used to
+  authorize access to other private PSRT resources on GitHub.
+
+PSRT admins are additionally given access to the following:
+
+* Admin for the PSRT and Security-Announce mailing lists.
+* The "Maintainer" role in the PSRT GitHub team.
+
+When PSRT membership or role changes occur it's the responsibility of PSRT admins
+and infrastructure admins to make the appropriate changes in all of the above locations.
 
 Rejected ideas
 ==============
@@ -110,6 +150,31 @@ Should inactive members be more aggressively pruned?
 The PSRT only triages a double-digit number of reports every year, meaning there
 aren't an abundance of opportunities to "prove" activity on the scale of months. For this
 reason along with aligning with existing yearly schedules, a yearly pruning was recommended.
+
+Not publishing the full list of PSRT members
+--------------------------------------------
+
+The status quo for PSRT membership is that only PSRT admins are aware of the
+full list of PSRT members.
+
+Because PSRT members have access to sensitive information, PSRT member accounts
+are valuable, so it might come to reason that obscuring who has access to this information
+be a valid defensive measure to avoid members or member accounts being targeted.
+
+However, as a part of typical duties all *active*
+PSRT members are known to other PSRT members as well as the public through
+responding to reports and publishing advisories.
+
+PSRT members are also commonly Python core developers or have similarly privileged accounts
+and thus locking down account access is already a critical issue regardless of PSRT membership status.
+
+For these reasons, this PEP doesn't see the additional "visibility" into PSRT membership as a security issue.
+
+Publishing the PSRT members list only for Steering Council, PSF, etc
+--------------------------------------------------------------------
+
+As noted above, PSRT members have public components of the role
+and thus are able to be "enumerated" using this method, albeit less easily.
 
 Footnotes
 =========
