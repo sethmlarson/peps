@@ -55,7 +55,7 @@ Specification
 
 This PEP proposes codifying the below policy and management framework for PSRT membership
 into the Python Developer Guide. This PEP also proposes immediately pruning the PSRTs existing
-membership according to the described policy and publishing the list of active PSRT members after its acceptance. (2)
+membership according to the described policy and publishing the list of active PSRT members after its acceptance.
 
 Membership policy
 -----------------
@@ -173,8 +173,12 @@ For these reasons, this PEP doesn't see the additional "visibility" into PSRT me
 Publishing the PSRT members list only for Steering Council, PSF, etc
 --------------------------------------------------------------------
 
+An alternative to publishing the list of PSRT members publicly would be to make
+the list of members available to only certain groups like the Steering Council,
+PSF, etc.
+
 As noted above, PSRT members have public components of the role
-and thus are able to be "enumerated" using this method, albeit less easily.
+and thus are able to be "enumerated" using that method, albeit less easily.
 
 Footnotes
 =========
