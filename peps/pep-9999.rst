@@ -158,7 +158,7 @@ The status quo for PSRT membership is that only PSRT admins are aware of the
 full list of PSRT members.
 
 Because PSRT members have access to sensitive information, PSRT member accounts
-are valuable, so it might come to reason that obscuring who has access to this information
+are valuable, so it might stands to reason that obscuring who has access to this information
 be a valid defensive measure to avoid members or member accounts being targeted.
 
 However, as a part of typical duties all *active*
