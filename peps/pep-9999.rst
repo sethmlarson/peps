@@ -62,7 +62,7 @@ Membership policy
 
 To remain a member of the PSRT, each member must meet at least one of the criteria below:
 
-* Participating on an internal PSRT report discussion at least one vulnerability in the past year (or have been added to the PSRT in the last year).
+* Participating on an internal PSRT report discussion at least one vulnerability in the past year (1) (or have been added to the PSRT in the last year).
 * Release Managers with at least one non-EOL Python branch.
 * Active Steering Council members.
 
@@ -117,7 +117,7 @@ As a purely voluntary role, membership can also be given up by the individual me
 
 Removed members are eligible to be re-added to the PSRT following the process for adding new members.
 
-Upon PEP acceptance, the policy will take effect and remove members who no longer fit the above criteria (1).
+Upon PEP acceptance, the policy will take effect and remove members who no longer fit the above criteria (2).
 Note that for the first round of removals post-PEP acceptance, there will be time given for voluntary stepping-down
 and removal of previous PSRT members will happen before publishing the list of PSRT members to avoid publishing members
 which haven't opted-in to the new policy with continued PSRT membership.
@@ -183,7 +183,10 @@ and thus are able to be "enumerated" using that method, albeit less easily.
 Footnotes
 =========
 
-* (1) Today there are 30 members in the PSRT. After applying the following policy there would be 15 members in the PSRT
+* (1) In the past 6 months the PSRT has received 54 new reports that needed to be triaged leaving plenty of available
+  opportunities for PSRT members to meet the required amount per year.
+
+* (2) Today there are 30 members in the PSRT. After applying the following policy there would be 15 members in the PSRT
   which have actively coordinated a vulnerability fix in the past year.
 
 Copyright
